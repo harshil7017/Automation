@@ -12,6 +12,7 @@ public class First extends Base
 	{
 		// TODO Auto-generated method stub
 		Setup();
+		System.out.println("hello world");
 	
 	}
 }
