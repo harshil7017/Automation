@@ -1,6 +1,8 @@
 package Automation;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class Arrays {
 
@@ -19,8 +21,6 @@ public class Arrays {
 		arr[3]=5;
 		arr[4]=10;
 		
-		
-		
 		//int [] arr2= {1,2,4,5,10};
 		//System.out.println(arr2[2]);
 		//For loop with arrays
@@ -28,6 +28,7 @@ public class Arrays {
 		{
 			System.out.println(arr[i]);
 		}
+		
 		for(String s:name)
 		{
 			System.out.println(s);
@@ -36,7 +37,10 @@ public class Arrays {
 		b.add("harsh");
 		b.add("sheth");
 		System.out.println(b.get(1));
-		
+		System.out.println(b.contains("harsh"));
+		String[] name1={"harshil","Sheth","vadoddara"};
+		List<String> nameArrayList=java.util.Arrays.asList(name1);
+		nameArrayList.contains("seleni");
 		
 	}
 
