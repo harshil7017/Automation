@@ -1,14 +1,16 @@
 package Automation;
 
+import java.util.ArrayList;
+
 public class Arrays {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int num=5;
-		String name="vadodara";
+		String[] name={"harshil","Sheth","vadoddara"};
 		char a='r';
 		float dc=4.33f;
-		System.out.println(name + a);
+		
 		
 		int[] arr=new int[5];
 		arr[0]=1;
@@ -16,6 +18,25 @@ public class Arrays {
 		arr[2]=4;
 		arr[3]=5;
 		arr[4]=10;
+		
+		
+		
+		//int [] arr2= {1,2,4,5,10};
+		//System.out.println(arr2[2]);
+		//For loop with arrays
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]);
+		}
+		for(String s:name)
+		{
+			System.out.println(s);
+		}
+		ArrayList<String> b=new ArrayList<String>();
+		b.add("harsh");
+		b.add("sheth");
+		System.out.println(b.get(1));
+		
 		
 	}
 
