@@ -9,10 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-
-
-
-
 public class ParsingString {
 
 	public static void main(String[] args) {
@@ -29,7 +25,7 @@ public class ParsingString {
 		//driver.findElement(By.linkText("Forgot your password?")).click();
 		//parse string
 		driver.findElement(By.xpath("input[type*=\"pass\"]")).sendKeys("abc");
-		Assert.assertEquals(driver.findElement(By.cssSelector("p.error")).getText(),"* Incorrect username or password");
+		//Assert.assertEquals(driver.findElement(By.cssSelector("p.error")).getText(),"* Incorrect username or password");
 	}
 
 }
