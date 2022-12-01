@@ -24,8 +24,6 @@ public class StaticDropdown extends Base{
 		for(int i=0;i<6;i++)
 		{	
 			driver.findElement(By.xpath("//span[@id='hrefIncAdt']")).click();
-			
-			
 			i++;
 			
 		}
@@ -34,10 +32,13 @@ public class StaticDropdown extends Base{
 		WebElement fromcity=driver.findElement(By.xpath("//input[@id='ctl00_mainContent_ddl_originStation1_CTXT']"));
 		fromcity.click();
 		fromcity.sendKeys("Goa (GOI)");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
+		Thread.sleep(5000);
 		WebElement ToCity=driver.findElement(By.xpath("//input[@name='ctl00_mainContent_ddl_destinationStation1_CTXT']"));
 		ToCity.click();
 		ToCity.sendKeys("Adampur (AIP)");
+		
+	
+		
 	}
 
 }
