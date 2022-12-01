@@ -4,9 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import dev.failsafe.internal.util.Assert;
 
 
-public class ChildParent {
+
+public class ParentChid {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -20,6 +22,7 @@ public class ChildParent {
 		System.out.println(driver.findElement(By.xpath("//form/p[@class='infoMsg']")).getText());
 		driver.findElement(By.xpath("//div/button[@class=\"go-to-login-btn\"]")).click();
 		driver.findElement(By.xpath("input[type *= \"pass'\"]")).sendKeys("292829");
+		
 	}
 
 }
