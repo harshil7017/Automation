@@ -1,5 +1,6 @@
 package Automation;
 
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,18 +15,21 @@ public class MultiProduct {
 		// TODO Auto-generated method stub
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-		String[] items= {"Almonds","Cashews"};
+		String[] itemNeeded= {"Cauliflower","Pista"};		
 		driver.manage().window().maximize();
 		List<WebElement> products=driver.findElements(By.cssSelector("h4.product-name"));
 		for(int i=0;i<products.size();i++)
 		{
-			String name=products.get(i).getText();
-			List itemlist=Arrays.asList(items);
-			System.out.println(name);
-			if(itemlist.contains(items))
+			String[] name=products.get(i).getText().split("-");
+			String formattedName=name[0].trim();
+			List itemlist=Arrays.asList(itemNeeded);
+			System.out.println(formattedName);
+	
+			if(itemlist.contains(formattedName))
 			{
-				driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
-				break;
+			
+				driver.findElements(By.xpath("//div[@class='product-action']")).get(i).click();
+				
 			}
 			
 		}
