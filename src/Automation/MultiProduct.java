@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MultiProduct {
 
@@ -18,7 +20,9 @@ public class MultiProduct {
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 		String[] itemNeeded= {"Cauliflower","Pista"};		
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//WebDriverWait w = new WebDriverWait(driver, 5);
+		//w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.promoInfo")));
 		List<WebElement> products=driver.findElements(By.cssSelector("h4.product-name"));
 		for(int i=0;i<products.size();i++)
 		{
@@ -41,7 +45,9 @@ public class MultiProduct {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@class='promoCode']")).sendKeys("rahulshettyacademy");
 		driver.findElement(By.xpath("//button[@class='promoBtn']")).click();
+		
 		System.out.println(driver.findElement(By.cssSelector("span.promoInfo")).getText());
+		
 	}
 
 }
