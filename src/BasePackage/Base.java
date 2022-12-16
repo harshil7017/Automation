@@ -16,7 +16,7 @@ public class Base {
 		public static WebDriver Setup()
 		{
 				driver=new ChromeDriver();  //open chromedriver
-				driver.get("https://rahulshettyacademy.com/dropdownsPractise/");  //open URL
+				driver.get("https://rahulshettyacademy.com/AutomationPractice/");  //open URL
 				driver.manage().window().maximize();
 				return driver;
 		}
