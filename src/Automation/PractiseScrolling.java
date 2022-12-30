@@ -9,12 +9,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class PractiseScrolling {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		WebDriver driver=new ChromeDriver();
+		ChromeOptions option1=new ChromeOptions();
+		option1.setAcceptInsecureCerts(false);
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,500)");
